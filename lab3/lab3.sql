@@ -47,8 +47,8 @@ CROSS JOIN services s;
 SELECT u1.name, u2.email FROM users u1
 JOIN users u2 ON u1.name = u2.name AND u1.id <> u2.id;
 
--- 14. Підзапит у WHERE: Користувачі з платежами понад 1000
-SELECT * FROM users WHERE id IN (SELECT user_id FROM payments WHERE amount > 1000);
+-- 14. Підзапит у WHERE: Користувачі з платежами понад 100
+SELECT * FROM users WHERE id IN (SELECT user_id FROM payments WHERE amount > 100);
 
 -- 15. Підзапит у SELECT: Середня сума платежів
 SELECT id, (SELECT AVG(amount) FROM payments) AS avg_payment FROM users;
