@@ -105,7 +105,7 @@ db.customers.insertMany([
     city: "Miami",
     registeredAt: new ISODate("2022-11-30T00:00:00Z")
   }
-])
+])``
 
 db.products.insertMany([
   {
